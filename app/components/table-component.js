@@ -1,7 +1,15 @@
 /* eslint-disable prettier/prettier */
 import Component from '@glimmer/component';
 import TableColumn from 'nfield-components/table/table-column';
-import { Record, RECORDS } from './utils';
+
+ class Record {
+  constructor({ SurveyId, SurveyName, SurveyType, SurveyState }) {
+    this.id = SurveyId;
+    this.SurveyName = SurveyName;
+    this.SurveyType = SurveyType;
+    this.SurveyState = SurveyState;
+  }
+}
 
 export default class TableBasic extends Component {
   get columns() {
@@ -13,6 +21,7 @@ export default class TableBasic extends Component {
   }
 
   get records() {
-    return RECORDS.map((record) => new Record(record));
+    return this.args.survey.map((record) => new Record(record));
   }
 }
+
