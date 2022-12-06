@@ -6,11 +6,9 @@ import { Record, RECORDS } from './utils';
 export default class TableBasic extends Component {
   get columns() {
     return [
-      new TableColumn('column1'),
-      new TableColumn('column2'),
-      new TableColumn('column3'),
-      new TableColumn('column4'),
-      new TableColumn('column5'),
+      new TableColumn('SurveyName'),
+      new TableColumn('SurveyType'),
+      new TableColumn('SurveyState'),
     ];
   }
 

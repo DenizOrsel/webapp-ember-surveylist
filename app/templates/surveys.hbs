@@ -1,14 +1,14 @@
+{{outlet}}
 {{page-title "Surveys"}}
 
 
-<h1>Surveys List</h1>
 
 <ul>
-  {{#each @model as |survey|}}
-    <li>{{survey}}</li>
+  {{#each @model as |surveyName|}}
+    <li>{{surveyName}}</li>
   {{/each}}
 </ul>
 
 
-{{table-component}}
-{{outlet}}
+<TableComponent @surveyName={{@model}}/>
+
